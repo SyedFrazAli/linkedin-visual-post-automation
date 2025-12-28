@@ -1,0 +1,25 @@
+{
+  "name": "linkedin-visual-post-automation",
+  "version": "1.0.0",
+  "description": "Automated system for generating and scheduling visual LinkedIn posts",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "generate": "node src/generate-images.js",
+    "schedule": "node src/scheduler.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": ["linkedin", "automation", "social-media", "image-generation"],
+  "author": "Syed Fraz Ali",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^21.11.0",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.4.5",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
