@@ -50,13 +50,11 @@ export async function generateImages() {
     while (!success && retries > 0) {
       try {
         await page.setContent(html, { 
-          waitUntil: 'networkidle0',
-          timeout: 60000  // Increased timeout to 60s
+          waitUntil: 'domcontentloaded',          timeout: 60000  // Increased timeout to 60s
         });
         
         // Wait for content to fully render
-        await page.waitForTimeout(2000);
-        
+        await new Promise(resolve => setTimeout(resolve, 2000));        
         const imagePath = path.join(outputDir, `${post.id}.png`);
         await page.screenshot({ path: imagePath, type: 'png' });
 
