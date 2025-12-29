@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "5 Key Principles of Software Architecture",
+    "subtitle": "Building scalable and maintainable systems",
+    "author": "Syed Fraz Ali",
+    "color": "#0077b5",
+    "status": "ready",
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "title": "The Power of Clean Code",
+    "subtitle": "Why readability matters more than cleverness",
+    "author": "Syed Fraz Ali",
+    "color": "#2ecc71",
+    "status": "ready",
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "title": "Microservices vs Monolith",
+    "subtitle": "Choosing the right architecture for your project",
+    "author": "Syed Fraz Ali",
+    "color": "#e74c3c",
+    "status": "ready",
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "title": "DevOps Best Practices",
+    "subtitle": "Continuous integration and deployment strategies",
+    "author": "Syed Fraz Ali",
+    "color": "#9b59b6",
+    "status": "ready",
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "title": "Understanding Design Patterns",
+    "subtitle": "Essential patterns every developer should know",
+    "author": "Syed Fraz Ali",
+    "color": "#f39c12",
+    "status": "ready",
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  }
+]
