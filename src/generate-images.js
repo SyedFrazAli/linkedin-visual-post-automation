@@ -17,7 +17,7 @@ export async function generateImages() {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  console.log(chalk.blue(`\n📝 Found ${posts.length} posts to generate\n`));
+  console.log(chalk.blue(`\n📸 Found ${posts.length} posts to generate\n`));
 
   const browser = await puppeteer.launch({
     headless: 'new',
@@ -43,20 +43,40 @@ export async function generateImages() {
       .replace('{{AUTHOR}}', post.author || 'Syed Fraz Ali')
       .replace('{{COLOR}}', post.color || '#0A66C2');
 
-    // Generate image
-    await page.setContent(html, { waitUntil: 'networkidle0' });
+    // Generate image with retry logic
+    let success = false;
+    let retries = 3;
     
-    const imagePath = path.join(outputDir, `${post.id}.png`);
-    await page.screenshot({ path: imagePath, type: 'png' });
+    while (!success && retries > 0) {
+      try {
+        await page.setContent(html, { 
+          waitUntil: 'networkidle0',
+          timeout: 60000  // Increased timeout to 60s
+        });
+        
+        // Wait for content to fully render
+        await page.waitForTimeout(2000);
+        
+        const imagePath = path.join(outputDir, `${post.id}.png`);
+        await page.screenshot({ path: imagePath, type: 'png' });
 
-    post.imagePath = imagePath;
-    console.log(chalk.green(`✅ Saved: ${imagePath}`));
+        post.imagePath = imagePath;
+        console.log(chalk.green(`✅ Saved: ${imagePath}`));
+        success = true;
+      } catch (error) {
+        retries--;
+        console.log(chalk.yellow(`⚠️  Retry ${3 - retries}/3 for ${post.title}`));
+        if (retries === 0) {
+          console.log(chalk.red(`❌ Failed to generate image for ${post.title}: ${error.message}`));
+        }
+      }
+    }
   }
 
   await browser.close();
 
   // Update posts.json with image paths
   fs.writeFileSync(postsPath, JSON.stringify(posts, null, 2));
-  
-  console.log(chalk.green.bold('\n✨ All images generated successfully!\n'));
+
+  console.log(chalk.green.bold('\n✅ All images generated successfully!\n'));
 }
