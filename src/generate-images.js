@@ -56,10 +56,9 @@ export async function generateImages() {
 
     // Replace placeholders
     html = html
-      .replace('{{TITLE}}', post.title)
-      .replace('{{SUBTITLE}}', post.subtitle || '')
-      .replace('{{AUTHOR}}', post.author || 'Syed Fraz Ali')
-      .replace('{{COLOR}}', post.color || '#0A66C2');
+      .replaceAll('{{TITLE}}', post.title)      .replaceAll('{{SUBTITLE}}', post.subtitle || '')
+      .replaceAll('{{AUTHOR}}', post.author || 'Syed Fraz Ali')
+      .replaceAll('{{COLOR}}', post.color || '#0A66C2');
 
     // Check if AI background image exists
     const bgImagePath = path.join(outputDir, `bg-${post.id}.png`);
