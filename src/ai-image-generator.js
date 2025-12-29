@@ -31,8 +31,7 @@ export async function generateAIBackground(prompt, outputPath) {
         },
         nsfw: false,
         trusted_workers: true,
-        models: ['stable_diffusion']
-      },
+     },
       {
         headers: {
           'apikey': '0000000000', // Anonymous key - completely free
