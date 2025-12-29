@@ -1,12 +1,17 @@
-const cron = require('node-cron');
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const notifier = require('node-notifier');
+import cron from 'node-cron';
+import fs from 'fs';
+import path from 'path';
+import { exec } from 'child_process';
+import notifier from 'node-notifier';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const postsPath = path.join(__dirname, '../content/posts.json');
 
-function getNextPost() {
+export function getNextPost() {
   const posts = JSON.parse(fs.readFileSync(postsPath, 'utf-8'));
   
   // Find the next post that is ready (status === 'ready')
@@ -15,7 +20,7 @@ function getNextPost() {
   return nextPost;
 }
 
-function sendReminder(post) {
+export function sendReminder(post) {
   console.log('\n🔔 POST REMINDER!');
   console.log('━'.repeat(50));
   console.log(`📝 Title: ${post.title}`);
@@ -42,7 +47,7 @@ function sendReminder(post) {
   }
 }
 
-function startScheduler() {
+export function startScheduler() {
   console.log('🚀 LinkedIn Post Scheduler Started');
   console.log(`⏰ Schedule: ${process.env.POST_SCHEDULE || '0 9 * * 1,3,5'}`);
   
@@ -59,5 +64,3 @@ function startScheduler() {
   
   console.log('✅ Scheduler is running. Press Ctrl+C to stop.\n');
 }
-
-module.exports = { startScheduler, getNextPost, sendReminder };
