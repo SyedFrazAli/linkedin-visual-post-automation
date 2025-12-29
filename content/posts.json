@@ -3,45 +3,55 @@
     "id": 1,
     "title": "5 Key Principles of Software Architecture",
     "subtitle": "Building scalable and maintainable systems",
+    "description": "Software architecture is the foundation of any successful application. Here are 5 essential principles:\n\n1️⃣ **Separation of Concerns**: Divide your system into distinct sections, each handling a specific responsibility. This makes code easier to understand and maintain.\n\n2️⃣ **Modularity**: Break down complex systems into smaller, independent modules that can be developed, tested, and deployed separately.\n\n3️⃣ **Scalability**: Design systems that can handle growth in users, data, and traffic without major restructuring.\n\n4️⃣ **Loose Coupling**: Minimize dependencies between components to make changes easier and reduce the ripple effect of modifications.\n\n5️⃣ **High Cohesion**: Keep related functionality together within the same module or component.\n\nThese principles help create systems that are flexible, maintainable, and ready for future changes. 🚀\n\n#SoftwareArchitecture #SystemDesign #BestPractices",
     "author": "Syed Fraz Ali",
-    "color": "#0077b5",
+    "color": "#0077B5",
     "status": "ready",
-    "createdAt": "2025-01-01T00:00:00.000Z"
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "aiPrompt": "modern software architecture diagram with 5 layers, cloud computing, microservices, clean design, professional tech illustration, blue gradient"
   },
   {
     "id": 2,
     "title": "The Power of Clean Code",
     "subtitle": "Why readability matters more than cleverness",
+    "description": "Clean code is not just about making things work—it's about writing code that others (including your future self) can understand and maintain.\n\n📖 **Key Principles**:\n\n• **Meaningful Names**: Use descriptive variable and function names that explain their purpose.\n• **Small Functions**: Each function should do ONE thing and do it well.\n• **Clear Structure**: Organize code logically with consistent formatting.\n• **Minimal Comments**: Code should be self-explanatory; use comments only when necessary.\n• **DRY Principle**: Don't Repeat Yourself—eliminate redundant code.\n\n\"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.\" - Martin Fowler\n\nClean code reduces bugs, improves collaboration, and makes maintenance 10x easier. 💻✨\n\n#CleanCode #SoftwareDevelopment #CodeQuality",
     "author": "Syed Fraz Ali",
-    "color": "#2ecc71",
+    "color": "#2ECC71",
     "status": "ready",
-    "createdAt": "2025-01-01T00:00:00.000Z"
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "aiPrompt": "clean code on screen, syntax highlighting, modern code editor, developer workspace, organized code structure, green theme"
   },
   {
     "id": 3,
     "title": "Microservices vs Monolith",
     "subtitle": "Choosing the right architecture for your project",
+    "description": "The debate between Microservices and Monolithic architecture continues. Here's what you need to know:\n\n🏢 **Monolithic Architecture**:\n✅ Simple to develop and deploy\n✅ Easier to test end-to-end\n✅ Better for small teams\n❌ Difficult to scale independently\n❌ One bug can bring down the entire system\n\n🔷 **Microservices Architecture**:\n✅ Independent scaling of services\n✅ Technology flexibility\n✅ Fault isolation\n❌ Complex infrastructure\n❌ Requires DevOps expertise\n\n**When to choose Monolith**:\n• Small to medium-sized applications\n• Limited team size\n• MVP or proof of concept\n\n**When to choose Microservices**:\n• Large-scale applications\n• Multiple teams working independently\n• Need for high scalability\n\nThere's no one-size-fits-all solution. Choose based on your team size, complexity, and scalability needs. 🎯\n\n#Microservices #SoftwareArchitecture #TechDecisions",
     "author": "Syed Fraz Ali",
-    "color": "#e74c3c",
+    "color": "#E74C3C",
     "status": "ready",
-    "createdAt": "2025-01-01T00:00:00.000Z"
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "aiPrompt": "microservices architecture diagram vs monolithic architecture, containers, distributed systems, comparison infographic, red theme"
   },
   {
     "id": 4,
     "title": "DevOps Best Practices",
     "subtitle": "Continuous integration and deployment strategies",
+    "description": "DevOps is not just about tools—it's a culture that brings development and operations together for faster, more reliable software delivery.\n\n🔄 **CI/CD Pipeline Essentials**:\n\n1️⃣ **Automated Testing**: Run unit, integration, and end-to-end tests automatically on every commit.\n\n2️⃣ **Infrastructure as Code**: Manage infrastructure using version-controlled code (Terraform, CloudFormation).\n\n3️⃣ **Continuous Deployment**: Deploy small changes frequently instead of big releases.\n\n4️⃣ **Monitoring & Logging**: Track application performance and errors in real-time.\n\n5️⃣ **Automated Rollbacks**: Quickly revert to previous versions if issues arise.\n\n🚀 **Benefits**:\n• Faster time to market\n• Reduced deployment failures\n• Improved collaboration\n• Better quality assurance\n\nDevOps transforms how teams build, test, and release software. It's the key to staying competitive in today's fast-paced tech world. 💪\n\n#DevOps #CICD #Automation #SoftwareEngineering",
     "author": "Syed Fraz Ali",
-    "color": "#9b59b6",
+    "color": "#9B59B6",
     "status": "ready",
-    "createdAt": "2025-01-01T00:00:00.000Z"
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "aiPrompt": "DevOps CI/CD pipeline diagram, automation, deployment process, continuous integration, purple gradient, modern tech illustration"
   },
   {
     "id": 5,
     "title": "Understanding Design Patterns",
     "subtitle": "Essential patterns every developer should know",
+    "description": "Design patterns are proven solutions to common software design problems. They provide a shared vocabulary for developers and accelerate development.\n\n🎯 **Top 5 Essential Patterns**:\n\n1️⃣ **Singleton Pattern**: Ensures a class has only one instance (useful for database connections, configuration managers).\n\n2️⃣ **Factory Pattern**: Creates objects without specifying exact classes, promoting loose coupling.\n\n3️⃣ **Observer Pattern**: One-to-many relationship where observers get notified of state changes (event systems, pub/sub).\n\n4️⃣ **Strategy Pattern**: Defines a family of algorithms and makes them interchangeable at runtime.\n\n5️⃣ **Decorator Pattern**: Adds new functionality to objects dynamically without modifying their structure.\n\n📚 **Why Learn Design Patterns?**\n• Write more maintainable code\n• Communicate solutions effectively\n• Avoid reinventing the wheel\n• Follow industry best practices\n\nMastering design patterns is like having a toolbox full of proven solutions ready to use. 🛠️\n\n#DesignPatterns #SoftwareDesign #Programming",
     "author": "Syed Fraz Ali",
-    "color": "#f39c12",
+    "color": "#F39C12",
     "status": "ready",
-    "createdAt": "2025-01-01T00:00:00.000Z"
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "aiPrompt": "software design patterns visualization, UML diagrams, object-oriented programming, pattern relationships, orange theme, educational illustration"
   }
 ]
